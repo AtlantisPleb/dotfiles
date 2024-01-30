@@ -19,3 +19,8 @@ alias vi=nvim
 alias vim=nvim
 
 source $ZSH/oh-my-zsh.sh
+
+setopt auto_cd
+cdpath=(
+    $HOME/code
+)
