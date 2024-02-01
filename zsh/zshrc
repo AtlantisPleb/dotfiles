@@ -17,6 +17,9 @@ plugins=(
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 alias vi=nvim
 alias vim=nvim
+alias sail="vendor/bin/sail"
+alias p="sail pest"
+alias pf="sail pest --filter"
 
 source $ZSH/oh-my-zsh.sh
 
