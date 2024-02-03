@@ -102,7 +102,7 @@ require("lazy").setup({
   { import = 'user.plugins.lspconfig' },
 
   -- Completion
-  { import = 'user.plugins.cmp' },
+  -- { import = 'user.plugins.cmp' },
 
   -- PHP Refactoring Tools
   { import = 'user.plugins.phpactor' },
