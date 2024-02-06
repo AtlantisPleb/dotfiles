@@ -19,6 +19,26 @@ return {
 
     --local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+        -- Golang
+    require('lspconfig').gopls.setup({
+      cmd = {'gopls', 'serve'},
+      settings = {
+        gopls = {
+          analyses = {
+            unusedparams = true,
+          },
+          staticcheck = true,
+        },
+      },
+      on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+        -- Add other 'on_attach' configurations here if needed
+      end,
+      capabilities = capabilities, -- If you're using 'cmp_nvim_lsp' uncomment the capabilities line at the start
+    })
+
+
     -- PHP
     require('lspconfig').intelephense.setup({
       commands = {

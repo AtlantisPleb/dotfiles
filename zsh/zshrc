@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH=$PATH:/usr/local/go/bin
 export FLYCTL_INSTALL="/home/atlantispleb/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
+export PATH=$PATH:$(go env GOPATH)/bin
 
 ZSH_THEME="robbyrussell"
 HYPHEN_INSENSITIVE="true"
